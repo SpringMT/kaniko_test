@@ -6,6 +6,8 @@ RUN mkdir /app
 RUN mkdir /app/api
 
 WORKDIR /app
+COPY api /app/api/
+RUN tree /app
 COPY shared /app/shared/
 RUN tree /app
 COPY api/shared /app/api/
@@ -17,4 +19,4 @@ COPY . /app
 WORKDIR /app/api
 
 RUN tree /app
-RUN cat /app/api/shared/shared.txt
+RUN cat /app/shared/shared.txt
