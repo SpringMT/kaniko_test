@@ -7,8 +7,11 @@ RUN mkdir /app/api
 
 WORKDIR /app
 COPY shared /app/shared/
+RUN tree /app
 COPY api/shared /app/api/
+RUN tree /app
 COPY api/shared /app/api/shared/
+RUN tree /app
 COPY . /app
 
 WORKDIR /app/api
